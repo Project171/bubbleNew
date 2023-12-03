@@ -49,7 +49,7 @@ div.container {
 
 h1 {
     color: white;
-    font: 36px "arial";
+    font: 32px "arial";
     font-weight: bold;
     margin-top: 2vh;
     margin-bottom: 2vh;
@@ -65,13 +65,14 @@ h2 {
     margin-bottom: 2vh;
 }
 
-/*Bubble Tooltip*/
+/*Bubble & Bar-lollipop Tooltip*/
 .tooltip {
     position: absolute;
     text-align: center;
     width: auto;
     height: auto;
     padding: 8px;
+    font: 12px Arial;
     background: white;
     border: 0px;
     border-radius: 8px;
@@ -101,21 +102,21 @@ h5 {
 /*Performance table*/
 #table-box {
     opacity: 0.9;
-    text-align: center;
+    text-align: start;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 th {
     color: white;
-    font-size: 16px;
-    text-align: center;
+    font-size: 14px;
+    text-align: end;
     white-space: normal;
     word-break: break-word;
     padding: 0.7vh;
 }
 
 td {
-    text-align: center;
+    text-align: end;
     font-size: 15px;
 }
 
@@ -134,11 +135,11 @@ td {
     position: relative; /* Container for the table and the commentary box */
 }
 
-#commentary-box {
+#commentary-box1, #commentary-box2, #commentary-box3, #commentary-box4 {
     display: none; /* Initially hidden */
     background-color: wheat;
     border-radius: 20px; /* Rounded corners for bubble effect */
-    padding: 10px; /* Padding inside the bubble */
+    padding: 15px; /* Padding inside the bubble */
     margin-top: 2vh;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6); /* Subtle shadow for depth */
     width: auto; /* Auto width based on content */
@@ -150,23 +151,23 @@ td {
     position: absolute;
     /*right: 20%;*/
     left: 20%;
-    /*transform: translateX(-50%);*/
+    transform: translateX(0%);
 }
 
 /* Arrow at the top of the bubble */
-#commentary-box:after {
+#commentary-box1:after, #commentary-box2:after, #commentary-box3:after, #commentary-box4:after {
     content: "";
     position: absolute;
     bottom: 100%; /* At the bottom of the bubble */
-    left: 50%; /* Centered horizontally */
+    left: 85%; /* Centered horizontally */
     margin-left: -10px; /* Half the width of the arrow */
-    border-width: 10px; /* Size of the arrow */
+    border-width: 15px; /* Size of the arrow */
     border-style: solid;
     border-color: transparent transparent wheat transparent; /* Arrow color */
 }
 
 /* Optional: Add custom styling for the text */
-#commentary-box p {
+#commentary-box1 p, #commentary-box2 p, #commentary-box3 p, #commentary-box4 p {
     margin: 0; /* Removes default margin */
     padding: 0; /* Removes default padding */
     line-height: 1.5; /* Improves line spacing */
@@ -177,12 +178,13 @@ td {
 /*Play, Forward, Back buttons*/
 .btn, .btn1, .btn2, .btn3 {
     padding: 5px 2px;
+    /*font-weight: bold;*/
     /*margin-top: 1vh;*/
-    margin-bottom: 3vh;
+    margin-bottom: 2vh;
     color: white;
     font-size: 14px;
     background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
 }
 
 .button-container {
@@ -198,13 +200,12 @@ td {
 }
 
 
-#sortSelection, #dataSelection {
-    background-color: rgba(0, 0, 0, 0.8); /* Bootstrap's dark grey */
+#sortSelection, #dataSelection, #metricSelect, #lollipop-heading  {
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
-    /*border-color: #343a40; !* To match the border with the background *!*/
 }
 
-#sortSelection:hover, #dataSelection:hover {
+#sortSelection:hover, #dataSelection:hover, #metricSelect:hover {
     background-color: rgba(0, 0, 0, 1);
 }
 
@@ -216,6 +217,18 @@ td {
  /*Buttons*/
 .mt-2 {
     color: purple;
-    margin: 0;
-    font-size: 10px;
+    margin: 1vh;
+    font-size: 11px;
+}
+
+/*Legend*/
+.legend {
+    font-size: 12px;
+}
+
+.legend rect {
+    width: 18px;
+    height: 18px;
+    margin-right: 4px;
+    opacity: 0.7;
 }
