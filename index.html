@@ -29,7 +29,7 @@
     <div class="row">
         <!-- Selection Dropdown -->
         <div class="col-md-3 text-center">
-            <div class="mt-2">Market or Sector?</div>
+            <div class="mt-2">Select & Play OR Pause, Select & Play</div>
             <select id="dataSelection" class="form-select btn btn-outline-info">
                 <option value="market.csv">Markets</option>
                 <option value="sector.csv">Sectors</option>
@@ -59,7 +59,7 @@
 
         <!-- Table Sort Dropdown -->
         <div class="col-md-3 text-center">
-            <div class="mt-2">Sort Table by Metric (then, push "Play")</div>
+            <div class="mt-2">Sort Table by Metric during "Play" mode</div>
             <select id="sortSelection" class="form-select btn btn-outline-info">
                 <option value="total">Total Return</option>
                 <option value="income">Income Return</option>
@@ -75,15 +75,20 @@
         <!-- Table -->
         <div class="col-md-4 text-end" id="table-container">
             <div class="mt-2" id="table-box"></div>
-            <div id="commentary-box" style="display: none;"></div>
+            <div id="commentary-box1" style="display: none;"></div>
+            <div id="commentary-box2" style="display: none;"></div>
+            <div id="commentary-box3" style="display: none;"></div>
+            <div id="commentary-box4" style="display: none;"></div>
         </div>
 
 
         <!-- Text below scatterplot -->
         <a class="source" href="https://www.msci.com/research-and-insights?topic=real_estate"
-           class="text-success" target="_blank">Source: <em>MSCI (Inspired by Hans Rosling)</em>
+           class="text-success" target="_blank">Source: <em>MSCI</em>
         </a>
-
+        <a class="source" href="https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen?language=en"
+           class="text-success" target="_blank"><em>Inspired by the Hans Rosling TED talk shown by Dr. Pfister</em>
+        </a>
     </div>
 </div>
 
