@@ -1,0 +1,221 @@
+/****************/
+/*  Animation Plot */
+/****************/
+
+/*body {*/
+/*    !*background-color: rgba(29,67,30,1);*!*/
+/*    background-color: wheat;*/
+/*}*/
+
+.background-image {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/sector.jpg');
+}
+
+
+div.container {
+    display: flex;
+    flex-direction: column;
+    font-family: "arial";
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    padding-top: 3vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    padding-bottom: 3vh;
+    height: 100%;
+    width: 100%;
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);*/
+}
+
+.axis {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.axis path,
+.axis line,
+.domain {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+#bubble-area text {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+h1 {
+    color: white;
+    font: 36px "arial";
+    font-weight: bold;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+
+h2 {
+    color: #D80621;
+    color: wheat;
+    font: 20px "arial";
+    font-weight: bold;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+/*Bubble Tooltip*/
+.tooltip {
+    position: absolute;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 8px;
+    background: white;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+h4 {
+    color: white;
+    font: 14px "arial";
+    font-weight: bold;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+h5 {
+    font: 10px "arial";
+    font-weight: bold;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.tooltip h4, .tooltip h5 {
+    margin: 0;
+    padding: 0;
+}
+
+/*Performance table*/
+#table-box {
+    opacity: 0.9;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+th {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    white-space: normal;
+    word-break: break-word;
+    padding: 0.7vh;
+}
+
+td {
+    text-align: center;
+    font-size: 15px;
+}
+
+.table-highlight th {
+    font-size: larger;
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+}
+
+.table.table-highlight tr {
+    border: black; /* Removes all borders from rows and cells */
+}
+
+#table-container {
+    position: relative; /* Container for the table and the commentary box */
+}
+
+#commentary-box {
+    display: none; /* Initially hidden */
+    background-color: wheat;
+    border-radius: 20px; /* Rounded corners for bubble effect */
+    padding: 10px; /* Padding inside the bubble */
+    margin-top: 2vh;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6); /* Subtle shadow for depth */
+    width: auto; /* Auto width based on content */
+    max-width: 100%; /* Maximum width */
+    text-align: center; /* Center align text */
+    font-size: 14px; /* Font size */
+    color: #333; /* Text color */
+    /* Position the box */
+    position: absolute;
+    /*right: 20%;*/
+    left: 20%;
+    /*transform: translateX(-50%);*/
+}
+
+/* Arrow at the top of the bubble */
+#commentary-box:after {
+    content: "";
+    position: absolute;
+    bottom: 100%; /* At the bottom of the bubble */
+    left: 50%; /* Centered horizontally */
+    margin-left: -10px; /* Half the width of the arrow */
+    border-width: 10px; /* Size of the arrow */
+    border-style: solid;
+    border-color: transparent transparent wheat transparent; /* Arrow color */
+}
+
+/* Optional: Add custom styling for the text */
+#commentary-box p {
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    line-height: 1.5; /* Improves line spacing */
+}
+
+/*Buttons and Others*/
+
+/*Play, Forward, Back buttons*/
+.btn, .btn1, .btn2, .btn3 {
+    padding: 5px 2px;
+    /*margin-top: 1vh;*/
+    margin-bottom: 3vh;
+    color: white;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 0.25rem;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-text {
+    margin-top: .5vh;
+    margin-top: .5vh;
+}
+
+
+#sortSelection, #dataSelection {
+    background-color: rgba(0, 0, 0, 0.8); /* Bootstrap's dark grey */
+    color: white;
+    /*border-color: #343a40; !* To match the border with the background *!*/
+}
+
+#sortSelection:hover, #dataSelection:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.source {
+    font-size: 12px;
+    color: purple;
+}
+
+ /*Buttons*/
+.mt-2 {
+    color: purple;
+    margin: 0;
+    font-size: 10px;
+}
